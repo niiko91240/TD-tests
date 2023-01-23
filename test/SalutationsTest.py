@@ -41,7 +41,16 @@ class SalutationsTest(unittest.TestCase):
 
     @parameterized.parameterized.expand(
         [
-            [LangueFrancaise(), PeriodeDeLaJournee.DEFAULT, Constantes.Francais.AU_REVOIR],
+            [LangueFrancaise(), PeriodeDeLaJournee.DEFAULT, Constantes.Francais.BONNE_JOURNEE],
+            [LangueFrancaise(), PeriodeDeLaJournee.MATIN, Constantes.Francais.BONNE_JOURNEE],
+            [LangueFrancaise(), PeriodeDeLaJournee.APRES_MIDI, Constantes.Francais.BONNE_JOURNEE],
+            [LangueFrancaise(), PeriodeDeLaJournee.SOIR, Constantes.Francais.BONNE_SOIREE],
+            [LangueFrancaise(), PeriodeDeLaJournee.NUIT, Constantes.Francais.BONNE_SOIREE],
+            [LangueAnglaise(), PeriodeDeLaJournee.DEFAULT, Constantes.Anglais.HAVE_GOOD_DAY],
+            [LangueAnglaise(), PeriodeDeLaJournee.MATIN, Constantes.Anglais.HAVE_GOOD_DAY],
+            [LangueAnglaise(), PeriodeDeLaJournee.APRES_MIDI, Constantes.Anglais.HAVE_GOOD_DAY],
+            [LangueAnglaise(), PeriodeDeLaJournee.SOIR, Constantes.Anglais.HAVE_GOOD_NIGHT],
+            [LangueAnglaise(), PeriodeDeLaJournee.NUIT, Constantes.Anglais.HAVE_GOOD_NIGHT],
         ],
         lambda _, __, args:
         "test ETANT DONNE un utilisateur parlant la langue %s \n"

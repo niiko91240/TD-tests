@@ -1,4 +1,4 @@
-from test.utilities.LangueStub import LangueStub
+from utilities.LangueStub import LangueStub
 
 
 class LangueSpy(LangueStub):

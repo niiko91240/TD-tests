@@ -1,5 +1,6 @@
 import unittest
 import parameterized.parameterized
+import os
 
 from src.Langues.Constantes import Constantes
 from src.Langues.LangueAnglaise import LangueAnglaise
@@ -24,7 +25,7 @@ class PalindromeTest(unittest.TestCase):
         [LangueFrancaise(), Constantes.Francais.BIEN_DIT],
     ],
         lambda _, __, args:
-        "test ETANT DONNE un utilisateur parlant la langue %s \n"
+        str(os.getenv('LANG')) + "test ETANT DONNE un utilisateur parlant la langue %s \n"
         "QUAND on saisit un palindrome \n"
         "ALORS %s est renvoyé ensuite"
         % (str(type(args.args[0]).__name__), args.args[1])

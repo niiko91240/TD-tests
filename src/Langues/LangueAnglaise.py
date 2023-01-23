@@ -19,3 +19,9 @@ class LangueAnglaise:
 
     def bien_dit(self):
         return Constantes.Anglais.WELL_DONE
+
+    def au_revoir(self, periode_journee):
+        if (periode_journee == PeriodeDeLaJournee.SOIR or periode_journee == PeriodeDeLaJournee.NUIT):
+            return Constantes.Anglais.HAVE_GOOD_NIGHT
+        else:
+            return Constantes.Anglais.HAVE_GOOD_DAY

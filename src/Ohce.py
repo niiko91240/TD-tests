@@ -1,3 +1,5 @@
+import os
+
 class Ohce:
     def __init__(self, langue, periode_journee):
         self.__periode_journee = periode_journee
@@ -10,7 +12,7 @@ class Ohce:
         return self.__langue.dire_bonjour(self.__periode_journee)
 
     def __au_revoir(self):
-        return "Au revoir"
+        return self.__langue.au_revoir(self.__periode_journee)
 
     def palindrome(self, palindrome):
         miroir = palindrome[::-1]
